@@ -18,9 +18,9 @@ router.post('/verif', (req, res) => {
         (err, results) => {
             const payload = { nickname } ;
             const token = jwt.sign(payload, mySecret);
-            console.log('avant la comparaison')
+            // console.log('avant la comparaison')
             if (bcrypt.compareSync(password, results[0].password)) {
-                    console.log('passe')
+                    
                     res.json({ "message": `welcome ${nickname}`, 'id': results[0].id ,  token });
             } else {
                 console.log('pass pas')
