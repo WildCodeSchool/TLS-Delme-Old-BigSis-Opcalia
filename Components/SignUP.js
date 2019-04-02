@@ -44,7 +44,7 @@ class SignUP extends Component {
     const subscribe = { nickname, email, password }
     console.log('fc', this.state)
     if (confirmPass === password) {
-      return fetch('http://192.168.8.120:5000/auth/signup', {
+      return fetch('http:/172.20.10.5:5000/auth/signup', {
         method: 'POST',
         headers: {
           accept: 'application/json ',
